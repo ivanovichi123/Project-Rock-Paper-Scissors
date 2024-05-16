@@ -1,8 +1,12 @@
 console.log("Good luck :)");
 let humanScore = 0;
 let computerScore = 0;
-
-playGame();
+let start = prompt("Hi, click cancel and read the instructions, when youre ready, reload the page and write ready");
+if(start === "ready") {
+    playGame();
+} else {
+    alert("Please reload the page and write ready correctly");
+}
 
 function getComputerChoice() {
     let rd = Math.floor(Math.random()*3) + 1;    
@@ -19,10 +23,14 @@ return computer;
 
 function getHumanChoice() {
     let humanChoice = prompt("Select between: paper,rock, and scissor");
+    if (humanChoice === "") {
+        alert("Please write a word");
+        getHumanChoice();
+    }
     let human = humanChoice.toLowerCase();
     if (human === "rock" || "paper" || "scissor") {
     } else {
-        alert("Pease type a valid word");
+        alert("Please type a valid word");
         getHumanChoice();
     }
 return human;
@@ -64,7 +72,7 @@ function playGame() {
         console.log(humanSelection);
     }
     if (humanScore > computerScore) {
-        alert("YOU WINS!!!");
+        alert("YOU WIN!!!");
     } else if (computerScore > humanScore) {
         alert("COMPUTER WINS!!!");
     } else {
