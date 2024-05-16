@@ -1,16 +1,23 @@
 console.log("Hello world :)");
-let getComputerChoice = Math.floor(Math.random()*3) + 1;     
-console.log(getComputerChoice);
-if (getComputerChoice === 1) {
-    let scissor = "scissor";
-    console.log(scissor);
-} else if (getComputerChoice === 2) {
-    let rock = "rock";
-    console.log(rock);
+let result = 0;
+function getComputerChoice() {
+    let rd = Math.floor(Math.random()*3) + 1;     
+if (rd === 1) {
+    let result = "scissor";
+    console.log(result);
+} else if (rd === 2) {
+    let result = "rock";
+    console.log(result);
 } else {
-    let paper = "paper";
-    console.log(paper);
+    let result = "paper";
+    console.log(result);
 }
+}
+getComputerChoice();
+
+
+
+
 
 
 
