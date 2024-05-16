@@ -5,7 +5,7 @@ let start = prompt("Hi, click cancel and read the instructions, when youre ready
 if(start === "ready") {
     playGame();
 } else {
-    alert("Please reload the page and write ready correctly");
+    alert("Please reload the page and write ready");
 }
 
 function getComputerChoice() {
